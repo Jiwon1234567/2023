@@ -55,6 +55,36 @@ print('밑변', l, '높이', h, '인 삼각형의 넓이는', area, '이다')
 print("안녕하세요? 여러분\n저는 파이썬을 무척 좋아합니다.\n9*8은", 9 * 8, "입니다.\n안녕히 계세요.")
 '''
 
+'''
 name = input('이름: ')
 age = int(input('나이: '))
-print('이름은 ' + name + "이고 나이는", age, "이다")
+print('이름은 ' + name + '이고 나이는', age, '이다')
+'''
+
+'''
+#candy = 120
+candy = int(input('사탕 가격: '))
+money = int(input('현재 가지고 있는 금액은 얼마입니까? '))
+print('사탕의 개수:', money // candy, '\n잔액:', money % candy) #나눠서 정수부분만 나타내려면 //쓰면됨
+'''
+
+'''
+r = float(input('반지름: '))     #산술연산할때 조건 없으면 float을 기본으로 사용
+PI = 3.14
+print('반지름이', r, '인 구의 부피는', 4 / 3 * PI * r ** 3, '이다')
+'''
+
+'''
+name = input('이름이 무엇입니까: ')
+print(name + '님 반갑습니다')
+age = int(input('나이는 얼마인가요: '))
+if age < 30 and age > 0:        # &&써도 되는데 and 써주는게 정통임, 0 < age < 30도 사용가능(좋진 않음)
+    print(30-age, '년 후면 30살이 되시는군요')
+else:
+    print('이미 30이 넘으셨군요 할아방탱이네요')
+'''
+
+'''
+num = int(input('참석자의 수를 입력하시오: '))
+print('치킨의 수:', num, '\n맥주의 수:', num * 2, '\n케익의 수:', num * 4)
+'''
