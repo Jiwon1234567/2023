@@ -117,8 +117,27 @@ else:
     print('입력된 정수는 홀수입니다.')
 '''
 
+'''
 n1, n2 = input('두 개의 정수를 입력해주세요: ').split()
 if int(n1) > int(n2):
-    print('큰 수는', int(n1))
+    print('큰 수는', n1)
 else:
-    print('큰 수는', int(n2))
+    print('큰 수는', n2)
+'''
+
+'''
+price = int(input('구입금액을 입력하세요: '))
+if price >= 100000:
+    print('지불금액:', int(price * 0.95))
+else:
+    print('지불금액:', price)
+'''
+
+string = input('문자열을 입력하시오: ')
+l = len(string)
+k = l // 2
+length = len(string)
+if length % 2 == 0:
+    print(string[k-1] + string[k])
+else:
+    print(string[k])
