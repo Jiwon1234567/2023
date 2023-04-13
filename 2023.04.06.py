@@ -190,12 +190,12 @@ for i in range(1, 8):
         while b in a:
             b = randint(1, 45)
         a.append(b)
-    a.sort()
+    a.sort()    # 오름차순 정렬 -> 없어도 됨
     for j in a:
         print(j, end=' ')
     c = randint(1, 45)
     while c in a:
         c = randint(1, 45)
-    print('(' + str(c) + ')')
+    #print('(' + str(c) + ')')
     print('(%d)' % c) # 보너스 숫자
     print('\n')

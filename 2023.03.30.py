@@ -132,10 +132,12 @@ else:
 print('게임 종료')
 '''
 
-
+'''
+#p.49 가위 바위 보
 from random import randint
 player = input('가위, 바위, 보 중에서 하나를 선택하세요: ')
 num = randint(0, 2)
+
 if num == 0:
     computer = "가위"
 elif num == 1:
@@ -144,9 +146,12 @@ else:
     computer = "보"
 
 print('사용자: ' + player, '/ 컴퓨터: ' + computer)
+
 if computer == player:
     print('비겼음')
 elif (computer == "바위" and player == "가위") or (computer == "가위" and player == "보") or (computer == "보" and player == "바위"):
     print('졌음')
 else:
     print('이겼음')
+'''
+
