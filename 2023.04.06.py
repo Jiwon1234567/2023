@@ -137,7 +137,7 @@ for i in range(1, 10):
         print(i, '*', j , '=', i * j)
 '''
 
-
+'''
 #로또 출력
 from random import randint  #randint는 끝값 -1 안되고 끝값까지 된다.
 for i in range(1, 8):
@@ -145,4 +145,57 @@ for i in range(1, 8):
     for j in range(6):
         print(randint(1, 45), end=' ')
     print('(', randint(1, 45), ')')
+    #print('(' + str(randint(1, 45)) + ')')
+    print('\n')
+'''
+
+ 
+#로또  같은 번호 출력 안되게 해보기
+from random import randint
+
+for i in range(1, 8):
+    print(str(i) + '일: ', end='')
+    for j in range(6):
+        a = []
+        b = randint(1, 46)
+        for k in range(len(a)):
+            if b == a.k:
+                b = randint(1, 46)
+            else:
+                a + b
+                break
+    for j in a:
+        print(a, end='')
+    c = randint(1, 46)
+    for j in range(len(a)):
+            if c == a.k:
+                c = randint(1, 46)
+            else:
+                break
+    print('(', c, ')')     #보너스 숫자
+    #print('(' + str(randint(1, 45)) + ')')
+    print('\n')
+
+
+
+
+#gpt가 수정한거
+from random import randint
+
+for i in range(1, 8):
+    print(str(i) + '일: ', end='')
+    a = []
+    for j in range(6):
+        b = randint(1, 45)
+        while b in a:
+            b = randint(1, 45)
+        a.append(b)
+    a.sort()
+    for j in a:
+        print(j, end=' ')
+    c = randint(1, 45)
+    while c in a:
+        c = randint(1, 45)
+    print('(' + str(c) + ')')
+    print('(%d)' % c) # 보너스 숫자
     print('\n')
