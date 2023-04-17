@@ -65,6 +65,15 @@ for i in "abcdef":
 '''
 
 '''
+#!!!!!!!!!!!!!!!왕중요!!!!!!!!!!!!
+factorial = 1.0         #float형(소수) -> .0붙이기
+max = int(input('정수를 입력하시오: '))
+for i in range(1, max + 1):     #곱하기여서 0부터 시작하면 안됨/1부터 시작 ->(1, max + 1)
+    factorial *= i
+print(max, '!은', factorial, '이다')
+'''
+
+'''
 string = input('영어문장을 입력해주세요: ')
 consonant = 0
 vowel = 0
@@ -79,9 +88,12 @@ for i in string:
         dot += 1
     else:
         consonant += 1
-print('자음: ', consonant, '개')
-print('모음: ', vowel, '개')
-print('점: ', dot, '개')
+print('자음:', consonant, '개')
+print('모음:', vowel, '개')
+print('점:', dot, '개')
+print('자음: %d개' % consonant)
+print('모음: %d개' % vowel)
+print('점: %d개'  % dot)
 '''
 
 '''
@@ -197,5 +209,5 @@ for i in range(1, 8):
     while c in a:
         c = randint(1, 45)
     #print('(' + str(c) + ')')
-    print('(%d)' % c) # 보너스 숫자
-    print('\n')
+    print('(%d)\n' % c) # 보너스 숫자
+    #print('\n')

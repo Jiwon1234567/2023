@@ -168,6 +168,7 @@ print('간격의 개수:', space)
 print('숫자의 개수:', digit)
 '''
 
+'''
 num = input('계좌번호를 입력하시오: ')
 s = ''
 if len(num) > 0:
@@ -177,3 +178,5 @@ if len(num) > 0:
         else:
             s += i
 print('계좌번호:', s)
+'''
+

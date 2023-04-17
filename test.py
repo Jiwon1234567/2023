@@ -1,3 +1,2 @@
-from random import randint
-num = randint(0, 2)
-print(num)
+for i in range(5):
+    print('*'* (10-i))
