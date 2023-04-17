@@ -97,7 +97,7 @@ you = input('좋아하는 음식은 무엇입니까? ')
 if you in food:
     print('취향이 같군요')
 else:
-    print('취향이 다르군요
+    print('취향이 다르군요')
 '''
 
 '''
