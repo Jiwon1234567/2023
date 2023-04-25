@@ -65,7 +65,7 @@ print('1부터', max, '사이의 모든', multi,'의 배수의 합은',sum,'입�
 #4장 p.32 자리수의 합
 num = int(input('숫자를 넣으세요: '))
 sum = 0
-while num % 10 != 0:
+while num > 0:            #조건 중요!!!! num > 0
     sum += num % 10
     num //= 10
 print('자리수의 합은', sum, '입니다')
@@ -78,9 +78,9 @@ print('종료하려면 음수를 입력하시오')
 num = 1
 sum = 0
 count = 0
-while num > 0:
+while num >= 0:
     num = int(input('성적을 입력하시오: '))
-    if num > 0:
+    if num >= 0:
         sum += num
         count += 1
 if count > 0:
@@ -100,6 +100,11 @@ for i in range(5):
     for j in range(10-i):
         print('*',end='')
     print('')
+'''
+
+'''
+for i in range(5):
+    print('*'* (10-i))
 '''
 
 '''
