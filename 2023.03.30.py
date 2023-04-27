@@ -1,9 +1,9 @@
 '''
 #p25 놀이기구 타는 조건
 age, height = input('나이와 키를 입력하세요.').split()  #split은 문자열로만 받을 수 있음
-if int(age) >= 10 and int(height) >= 160:
+if int(age) >= 10 and float(height) >= 160: #<키는 flaot>
     print('놀이기구를 탈 수 있습니다.')
-elif int(age) >= 10 or int(height) >= 160:
+elif int(age) >= 10 or float(height) >= 160:
     print('아쉽군요')
 else:
     print('놀이기구를 탈 수 없습니다.')
