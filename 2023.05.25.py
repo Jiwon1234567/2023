@@ -234,5 +234,5 @@ print(a['Lee'])
 
 
 contacts = {'Kim':'12312412', 'Lee':'010129391'}
-contacts.pop('Kim')
+contacts.pop('Kim')     #key를 주면 항목이 삭제됨
 print(contacts)
