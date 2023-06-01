@@ -15,14 +15,14 @@ contacts.pop('Kim')
 print(contacts)
 '''
 
-'''
+
 score = {'Korean':80, 'Math':90, 'English':70}
 print(score)
 for i in score.items():     #.items()쓰면 value까지 같이 나온다(잘 안씀)
     print(i)
 for i in score:             #i에 key가 들어간다
     print(i)
-'''
+
 
 '''
 score = {'Korean':80, 'Math':90, 'English':70}
@@ -190,8 +190,8 @@ a = Counter(100)
 print(a.get())
 '''
 
-
-
+'''
+#p.14 메소드 정의(테레비)
 class Television:
     def __init__(self, channel, volume, on):
         self.channel = channel
@@ -199,7 +199,7 @@ class Television:
         self.on = on
         
     def show(self):
-        print(self.channel, self.volume, self.on)
+        print('채널:', self.channel, '볼륨:', self.volume, '상태', self.on)
     
     def showNoPrint(self):  #이 방법 쓰면 ()까지 같이 출력됨
         return self.channel, self.volume, self.on
@@ -223,7 +223,7 @@ class Television:
         return self.volume
         
 t = Television(10, 20, True)
-#print(t.showNoPrint())
+#print(t.showNoPrint())     이렇게 쓰면 ()까지 같이 출력됨
 
 t.show()
 t.setChannel(50)
@@ -231,3 +231,40 @@ print(t.getChannel())
 t.setVolume(100)
 print(t.getVolume())
 t.show()
+'''
+
+#변수 개수에 따라 settler와 gettler개수 똑같이 맞춰줘야됨
+
+'''
+class Television:
+    def __init__(self, channel, volume, on):
+        self.__channel = channel
+        self.__volume = volume
+        self.__on = on
+        #뒤에 함수 다시 쓸때도 다 __붙여줘야됨
+        
+    def show(self):
+        print('채널:', self.__channel, '볼륨:', self.__volume, '상태', self.__on)
+    
+    def setChannel(self, channel):
+        self.__channel = channel
+    
+    def setVolume(self, volume):
+        self.__volume = volume
+        
+    def sefOn(self, on):
+        self.__on = on
+    
+    def getChannel(self):
+        return self.__channel
+    
+    def getVolume(self):
+        return self.__volume
+    
+    def getOn(self):
+        return self.__volume
+
+a = Television(30, 100, 1)
+a.show()
+print(a.getChannel())
+'''
