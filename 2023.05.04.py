@@ -85,8 +85,8 @@ print(power(3, 2))
 '''
 #5장 p.23
 def is_prime(n):
-    for i in range(n):
-        if i % n == 0:
+    for i in range(2, n):
+        if n % i == 0:
             return False
     return True
 
@@ -97,12 +97,15 @@ print(is_prime(n))
 
 '''
 #5장 p.27
-import math
+#import math -> from math import pi
+#math.pi -> pi          pi.()사용금지
+
+from math import pi
 def sphereVolumeArea(r, menu):
     if menu == 1:
-        return 4 / 3 * math.pi * r ** 3
+        return 4 / 3 * pi * r ** 3
     elif menu == 2:
-        return 2 * math.pi * r
+        return 2 * pi * r
     else:
         print('잘못 입력하셨습니다')
 
@@ -147,7 +150,7 @@ def select_num(menu = 2):
         print('잘못 입력하셨습니다')
 
 n = int(input('select num: '))
-print(select_num(n))
+print(select_num())
 '''
 
 '''
