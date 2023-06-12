@@ -36,16 +36,14 @@ calculator()
 
 '''
 #문제 3
-def print_str():
-    string = input('문자열: ')
-    print()
-    
-    repeat = int(input('횟수: '))
-    
+#문자열(파이썬)과 횟수(3)를! 매개변수로 전달받아
+def print_str(string, repeat):
     for i in range(repeat):
         print(string)
 
-print_str()
+string = input('문자열: ')
+repeat = int(input('\n횟수: '))
+print_str(string, repeat)
 '''
 
 '''
@@ -80,4 +78,40 @@ while menu != 9:
         break
     else:
         print('잘못 입력하셨습니다.')
+'''
+
+
+
+'''
+#6/1과제
+def print_menu():
+        print('1.연락처 추가')
+        print('2.연락처 삭제')
+        print('3.연락처 검색')
+        print('4.연락처 출력')
+        print('5.종료')
+
+contact = dict()
+while True:
+    print_menu()
+    menu = int(input('메뉴 항목을 선택하시오: '))
+    if menu == 1:
+        name = input('이름: ')
+        number = input('전화번호: ')
+        contact[name] = number
+    elif menu == 2:
+        name = input('삭제할 이름: ')
+        contact.pop(name)
+    elif menu == 3:
+        name = input('검색(이름): ')
+        number = contact[name]
+        print(name + '의 전화번호:', number)
+    elif menu == 4:
+        for i in contact:
+            print(i + '의 전화번호:', contact[i])
+    elif menu == 5:
+        break
+    else:
+        print('잘못 입력하셨습니다.')
+    print('-'*30)
 '''

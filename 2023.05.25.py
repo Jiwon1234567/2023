@@ -87,6 +87,29 @@ print('80점 이상 성적을 받은 학생은 %d명 입니다.' %count)
 '''
 
 '''
+#p.10 성적 처리 프로그램
+scores = []
+count = 0
+
+for i in range(5):
+    score = int(input('성적을 입력하시오: '))
+    scores.append(score)
+    if score >= 80:
+        count += 1
+    
+sum = 0
+
+for i in scores:
+    sum += i
+
+avg = sum / len(scores)
+print('성적 평균은', avg, '입니다.')
+print('80점 이상 성적을 받은 학생은 %d명입니다.'%count)
+'''
+
+
+
+'''
 #p.12
 dogNames = []
 while True:
@@ -219,9 +242,9 @@ print(dic.get('Kim')) #get('key')함수를 써도 똑같다(취향차이, 헷갈
 
 '''
 dic = {'Kim':'12312412', 'Lee':'010129391'}
-dic['Park'] = 1231248322  #딕셔너리 항목 추가 방법
+dic['Park'] = '1231248322'  #딕셔너리 항목 추가 방법
 print(dic)
-dic['Lee'] = 23942402938    #이미 있는것은 변경이 됨
+dic['Lee'] = '23942402938'    #이미 있는것은 변경이 됨
 '''
 
 '''
