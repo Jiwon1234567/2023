@@ -15,14 +15,14 @@ contacts.pop('Kim')
 print(contacts)
 '''
 
-
+'''
 score = {'Korean':80, 'Math':90, 'English':70}
 print(score)
 for i in score.items():     #.items()쓰면 value까지 같이 나온다(잘 안씀)
     print(i)
 for i in score:             #i에 key가 들어간다
     print(i)
-
+'''
 
 '''
 score = {'Korean':80, 'Math':90, 'English':70}
@@ -241,7 +241,7 @@ class Television:
         self.__channel = channel
         self.__volume = volume
         self.__on = on
-        #뒤에 함수 다시 쓸때도 다 __붙여줘야됨
+        #뒤에 똑같은 함수다시 쓸때도 다 __붙여줘야됨
         
     def show(self):
         print('채널:', self.__channel, '볼륨:', self.__volume, '상태', self.__on)
@@ -268,3 +268,5 @@ a = Television(30, 100, 1)
 a.show()
 print(a.getChannel())
 '''
+
+#self.__volume -> 정보 은닉

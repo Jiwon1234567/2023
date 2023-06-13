@@ -13,7 +13,7 @@ print_distance(x1, y1, x2, y2)
 '''
 
 '''
-#문제 1 수정
+#문제 1 수정(%f, 길이만을 구하는 함수)
 from math import sqrt
 
 def distance(a1, b1, a2, b2):

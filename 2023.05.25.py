@@ -82,7 +82,7 @@ for i in scores:    #for i in range()쓰지 말기
     if i >= 80:
         count += 1
 
-print('성적 평균은', sum/5, '입니다.')
+print('성적 평균은', sum/5.0, '입니다.')
 print('80점 이상 성적을 받은 학생은 %d명 입니다.' %count)
 '''
 
@@ -134,6 +134,7 @@ print(text[-3:])    #txt
 '''
 values = [1, 2, 3] * 3
 print(values)
+#print결과 -> [1, 2, 3, 1, 2, 3, 1, 2, 3]
 '''
 
 '''
