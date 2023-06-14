@@ -1,36 +1,25 @@
-class Television:
-    def __init__(self, channel, volume, on):
-        self.channel = channel
-        self.volume = volume
-        self.on = on
-        
-    def show(self):
-        print('채널:', self.channel, '볼륨:', self.volume, '상태', self.on)
+contact = {}
+while True:
+    print('1.연락처 추가')
+    print('2.연락처 삭제')
+    print('3.연락처 검색')
+    print('4.연락처 출력')
+    print('5.종료')
     
-    def showNoPrint(self):  #이 방법 쓰면 ()까지 같이 출력됨
-        return self.channel, self.volume, self.on
-    
-    def setChannel(self, channel):
-        self.channel = channel
-    
-    def setVolume(self, volume):
-        self.volume = volume
-        
-    def sefOn(self, on):
-        self.on = on
-    
-    def getChannel(self):
-        return self.channel
-    
-    def getVolume(self):
-        return self.volume
-    
-    def getOn(self):
-        return self.on
-        
-t = Television(10, 20, True)
-#print(t.showNoPrint())     이렇게 쓰면 ()까지 같이 출력됨
-
-t.on = False
-
-t.show()
+    menu = int(input('메뉴 항목을 선택하시오: '))
+    if menu == 1:
+        name = input('이름:')
+        num = input('전화번호:')
+        contact[name] = num
+    elif menu == 2:
+        name = input('이름:')
+        contact.pop(name)
+    elif menu == 3:
+        name = input('이름:')
+        num = contact[name]
+        print(name,'의 전화번호:',num)
+    elif menu == 4:
+        for i in contact:
+            print(i,'의 전화번호:',contact[i])
+    elif menu == 5:
+        break

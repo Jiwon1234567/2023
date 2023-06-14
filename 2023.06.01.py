@@ -7,7 +7,7 @@ a = dict()      #이 방법을 더 선호함
 
 contacts = {'Kim':'012345678', 'Park':'010123566', 'Lee':'10130392329'}
 print(contacts['Kim'])
-print(contacts.get('Lee'))
+print(contacts.get('Lee')) #기능 같은데 함수로 불러오는거 .get('')사용
 
 contacts['Choi'] = '01238712498'    #기본적으로 맨 뒤에 추가되지만 딕셔너리는 key로 접근하기 때문에 순서는 상관없음
 print(contacts)
@@ -16,6 +16,7 @@ print(contacts)
 '''
 
 '''
+#print 어떻게 출력되는지 외우기! 어떤 괄호, ''들어가는가까지
 score = {'Korean':80, 'Math':90, 'English':70}
 print(score)
 for i in score.items():     #.items()쓰면 value까지 같이 나온다(잘 안씀)
@@ -30,6 +31,7 @@ sum = 0
 for i in score:
     sum += score[i]
 print('평균=', sum/3.0)
+#print('평균=', sum/len(score)) 가능
 '''
 
 '''
@@ -52,6 +54,7 @@ print(english_dict[word])   #없는걸 입력하면 에러뜸
 
 
 '''
+#p.27 단어 카운터
 #!!!!!!!!!!!!!!!!!!!!!!!엄청 중요한 문제!!!!!!!!!!!!!!!!!!!!!!!!!!!
 frame = input('파일이름: ')
 file = open(frame, 'r')
@@ -220,7 +223,7 @@ class Television:
         return self.volume
     
     def getOn(self):
-        return self.volume
+        return self.on
         
 t = Television(10, 20, True)
 #print(t.showNoPrint())     이렇게 쓰면 ()까지 같이 출력됨
